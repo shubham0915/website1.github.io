@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Icon Popup On Hover</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <style>
+        
+
+
+
+
+
+.de{
+    
+    height: 300px;
+    display: grid;
+    place-items: center;
+    
+    font-family: "Poppins", sans-serif;
+    background: black;
+}
+
+
+.wrapper{
+    display: inline-flex;
+    list-style: none;
+}
+
+.wrapper .icon{
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip{
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip{
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before{
+    background: #3b5998;
+    color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #c32aa3;
+    color: #fff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #ff0000;
+    color: #fff;
+}
+    .a {
+      font-size: 16px;
+      font-family: system-ui, sans-serif;
+    }
+
+    .b {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 90px;
+    }
+
+    .c {
+      position: relative;
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .d {
+      font-size: 5em;
+      color: #333;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      margin-bottom: 60px;
+    }
+
+    .e {
+      margin-left: 250px;
+      margin-right: 250px;
+    }
+
+    .f {
+      font-size: 30px;
+      color: #666;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    </style>
+</head>
+<body>
+    <section class="c">
+        <img class="b" src="https://static.wixstatic.com/media/601a6af8c44541c0a785579bc4f1dacf.jpg" alt="Trees From Above" width="200" height="200">
+        <h2 class="d">About Us</h2>
+        <div class="e">
+          <p class="f">
+            Here at Climate Change, we are driven to make the world a better place. We have been involved in activities that empower individuals and communities. We strive to build productive relationships and make a positive impact with all of our pursuits. Join us and create real transformation in the lives of many.
+          </p>
+        </div>
+    </section>
+    <div class="de">
+    <ul class="wrapper">
+        <a href="https://www.facebook.com/NASAClimateChange/">
+        <li class="icon facebook">
+            <span class="tooltip">Facebook</span>
+            <span><i class="fab fa-facebook-f"></i></span>
+        
+        </li>
+        </a>
+        <a href="https://twitter.com/UNFCCC"></a>
+        <li class="icon twitter">
+            <span class="tooltip">Twitter</span>
+            <span><i class="fab fa-twitter"></i></span>
+        
+        </li>
+        </a>
+
+        <a href="https://www.instagram.com/everydayclimatechange/">
+        <li class="icon instagram">
+            <span class="tooltip">Instagram</span>
+            <span><i class="fab fa-instagram"></i></span>
+        </li>
+        </a>
+        <a href="https://www.youtube.com/channel/UCPbyIYGQv3BQebWiC9mKOBA">
+        <li class="icon youtube">
+            <span class="tooltip">Youtube</span>
+            <span><i class="fab fa-youtube"></i></span>
+        </li>
+        </a>
+    </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Page</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        .header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            
+        }
+        .navbar {
+            background-color: #333;
+            width: 100%;
+            height: 80px;
+            top: 0;
+            position: sticky;
+            display: inline-block;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            float: left;
+            
+        }
+
+        .navbar a {font-size: 30px;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+        .search {
+            float: right;
+            padding: 15px;
+        }
+
+        .search input {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px 15px;
+        }
+        .coll{
+            background-color: black;
+        }
+        #h1-content{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="col11">
+    <div><div class="header">
+        <h1>CLIMATE CHANGE</h1>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#h1-content">Home</a></li>
+            <li><a href="#h2-content">Factors</a></li>
+            <li><a href="#h4-content">Climate Awareness Hub</a></li>
+            <li><a href="#h5-content">About</a></li>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Search this website">
+            </div>
+        </ul>
+    </div>
+    <div></div>
+</div>
+
+    <div id="h1-content"></div>
+    <div id="h2-content"></div>
+    <div id="h3-content"></div>
+    <div id="h4-content"></div>
+    <div id="h5-content"></div>
+
+    <script>
+        // Fetch content from h1.html
+        fetch('h1.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('h1-content').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching h1.html:', error);
+            });
+
+        // Fetch content from h2.html
+        fetch('h2.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('h2-content').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching h2.html:', error);
+            });
+
+        // Fetch content from h3.html
+        fetch('h3.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('h3-content').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching h3.html:', error);
+            });
+
+        // Fetch content from h4.html
+        fetch('h4.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('h4-content').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching h4.html:', error);
+            });
+
+        // Fetch content from h5.html
+
+
+
+        fetch('h5.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('h5-content').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching h5.html:', error);
+            });
+
+
+       
+
+    </script>
+
+</body>
+</html>
